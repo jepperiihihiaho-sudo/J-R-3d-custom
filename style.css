@@ -1,0 +1,213 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 70px 20px 45px;
+    border-bottom: 1px solid #292929;
+}
+
+header h1 {
+    font-size: 52px;
+    letter-spacing: 4px;
+}
+
+header p {
+    margin-top: 12px;
+    color: #999;
+    font-size: 18px;
+}
+
+/* MENY */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background: #0b0b0b;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #222;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: #111;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+/* PRODUKTER */
+
+#produkter {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+#produkter h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.25s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    border-color: #666;
+}
+
+.product-image {
+    height: 280px;
+    background: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.product p {
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.product strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.product button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 6px;
+}
+
+/* OM OSS */
+
+#om-oss,
+#kontakt {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 25px;
+    text-align: center;
+}
+
+#om-oss h2,
+#kontakt h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#om-oss p,
+#kontakt p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #292929;
+    color: #666;
+}
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 20px;
+    }
+}
+.logo {
+    width: 300px;
+    height: auto;
+}
