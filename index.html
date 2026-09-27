@@ -1,115 +1,456 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&R 3D Custom</title>
+
+    <title>J & R</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<header>
+
+    <div class="header-top">
+
         <img src="logo.png" alt="J & R" class="logo">
 
-        <nav>
-            <a href="#produkter">Produkter</a>
-            <a href="#om">Om oss</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
+        <div class="language">
 
-    <main>
+            <button id="languageButton">
+                <span id="flag">🇸🇪</span>
+                <span id="languageText">SWE</span>
+                <span class="arrow">⌄</span>
+            </button>
 
-       <section class="hero">
-    <p class="hero-small">DESIGN • PRINT • CREATE</p>
+            <div id="languageMenu" class="language-menu">
 
-    <h2>Unika delar.<br>Din stil.</h2>
+                <button onclick="changeLanguage('sv')">
+                    🇸🇪 Svenska
+                </button>
 
-    <p>
-        Egendesignade 3D-printade produkter
-        för mopeder.
-    </p>
+                <button onclick="changeLanguage('en')">
+                    🇬🇧 English
+                </button>
 
-    <button onclick="location.href='#produkter'">
-        SE PRODUKTER
-    </button>
-</section>
+            </div>
 
-        <section id="produkter" class="products">
+        </div>
 
-            <h2>Våra produkter</h2>
+    </div>
 
-            <div class="product-grid">
+    <nav>
 
-                <div class="product">
-                    <div class="product-image">
-                        Produktbild
+        <a href="#produkter"
+           data-sv="Produkter"
+           data-en="Products">
+            Produkter
+        </a>
+
+        <a href="#semi-custom"
+           data-sv="Semi Custom"
+           data-en="Semi Custom">
+            Semi Custom
+        </a>
+
+        <a href="#full-custom"
+           data-sv="Full Custom"
+           data-en="Full Custom">
+            Full Custom
+        </a>
+
+        <a href="#kontakt"
+           data-sv="Kontakt"
+           data-en="Contact">
+            Kontakt
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <p class="hero-label">
+            DESIGN • PRINT • CREATE
+        </p>
+
+        <h1
+            data-sv="Unika delar.<br>Din stil."
+            data-en="Unique parts.<br>Your style.">
+            Unika delar.<br>Din stil.
+        </h1>
+
+        <p
+            data-sv="Egendesignade 3D-printade produkter för mopeder."
+            data-en="Custom 3D-printed products for mopeds.">
+            Egendesignade 3D-printade produkter för mopeder.
+        </p>
+
+        <a href="#produkter"
+           class="hero-button"
+           data-sv="SE PRODUKTER"
+           data-en="VIEW PRODUCTS">
+            SE PRODUKTER
+        </a>
+
+    </section>
+
+
+    <!-- SEMI CUSTOM -->
+
+    <section id="semi-custom" class="intro-section">
+
+        <p class="small-label">J & R CUSTOM</p>
+
+        <h2>Semi Custom</h2>
+
+        <p
+            data-sv="Våra egna designer med valbara detaljer."
+            data-en="Our own designs with selectable details.">
+            Våra egna designer med valbara detaljer.
+        </p>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="produkter" class="products-section">
+
+        <div class="section-heading">
+
+            <h2
+                data-sv="Våra produkter"
+                data-en="Our products">
+                Våra produkter
+            </h2>
+
+            <p
+                data-sv="Förbeställ våra designer och välj hur du vill ha dem."
+                data-en="Pre-order our designs and choose how you want them.">
+                Förbeställ våra designer och välj hur du vill ha dem.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- TÄNDNINGSKÅPA 01 -->
+
+            <article class="product-card"
+                     onclick="openProduct('tandningskapa1')">
+
+                <div class="product-image">
+
+                    <img src="images/tandningskapa1.png"
+                         alt="Tändningskåpa 01">
+
+                    <div class="coming-soon">
+                        Soon available
                     </div>
 
-                    <h3>Tändningskåpa</h3>
-
-                    <p>Unik 3D-printad design.</p>
-
-                    <strong>299 kr</strong>
-
-                    <button>Beställ</button>
                 </div>
 
-                <div class="product">
-                    <div class="product-image">
-                        Produktbild
+                <div class="product-content">
+
+                    <p class="product-number">
+                        J & R DESIGN 01
+                    </p>
+
+                    <h3
+                        data-sv="Tändningskåpa 01"
+                        data-en="Ignition Cover 01">
+                        Tändningskåpa 01
+                    </h3>
+
+                    <p
+                        data-sv="Unik 3D-printad design."
+                        data-en="Unique 3D-printed design.">
+                        Unik 3D-printad design.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>299 kr</strong>
+
+                        <span
+                            data-sv="VISA →"
+                            data-en="VIEW →">
+                            VISA →
+                        </span>
+
                     </div>
 
-                    <h3>Förgasarinsug</h3>
-
-                    <p>Specialdesignat för din moped.</p>
-
-                    <strong>249 kr</strong>
-
-                    <button>Beställ</button>
                 </div>
 
-                <div class="product">
-                    <div class="product-image">
-                        Produktbild
+            </article>
+
+
+            <!-- TÄNDNINGSKÅPA 02 -->
+
+            <article class="product-card"
+                     onclick="openProduct('tandningskapa2')">
+
+                <div class="product-image">
+
+                    <img src="images/tandningskapa2.png"
+                         alt="Tändningskåpa 02">
+
+                    <div class="coming-soon">
+                        Soon available
                     </div>
 
-                    <h3>Custom Del</h3>
+                </div>
 
-                    <p>Egna unika designer.</p>
+                <div class="product-content">
 
-                    <strong>Från 199 kr</strong>
+                    <p class="product-number">
+                        J & R DESIGN 02
+                    </p>
 
-                    <button>Beställ</button>
+                    <h3
+                        data-sv="Tändningskåpa 02"
+                        data-en="Ignition Cover 02">
+                        Ignition Cover 02
+                    </h3>
+
+                    <p
+                        data-sv="Unik 3D-printad design."
+                        data-en="Unique 3D-printed design.">
+                        Unik 3D-printad design.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>299 kr</strong>
+
+                        <span
+                            data-sv="VISA →"
+                            data-en="VIEW →">
+                            VISA →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- BAKSTÄNKA -->
+
+            <article class="product-card"
+                     onclick="openProduct('bakstanka')">
+
+                <div class="product-image">
+
+                    <img src="images/bakstanka.png"
+                         alt="Bakstänka">
+
+                    <div class="coming-soon">
+                        Soon available
+                    </div>
+
+                </div>
+
+                <div class="product-content">
+
+                    <p class="product-number">
+                        J & R DESIGN 03
+                    </p>
+
+                    <h3
+                        data-sv="Semi Custom Bakstänka"
+                        data-en="Semi Custom Rear Fender">
+                        Semi Custom Rear Fender
+                    </h3>
+
+                    <p
+                        data-sv="Egendesignad custom bakstänka."
+                        data-en="Custom designed rear fender.">
+                        Egendesignad custom bakstänka.
+                    </p>
+
+                    <div class="product-footer">
+
+                        <strong>349 kr</strong>
+
+                        <span
+                            data-sv="VISA →"
+                            data-en="VIEW →">
+                            VISA →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- FULL CUSTOM -->
+
+    <section id="full-custom" class="full-custom">
+
+        <p class="small-label">J & R CUSTOM</p>
+
+        <h2>Full Custom</h2>
+
+        <p
+            data-sv="Har du en egen idé? Beskriv exakt hur du vill att din produkt ska se ut."
+            data-en="Have your own idea? Tell us exactly how you want your product to look.">
+            Har du en egen idé? Beskriv exakt hur du vill att din produkt ska se ut.
+        </p>
+
+        <button
+            data-sv="BESKRIV DIN IDÉ"
+            data-en="DESCRIBE YOUR IDEA">
+            BESKRIV DIN IDÉ
+        </button>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="kontakt" class="contact">
+
+        <p class="small-label">J & R</p>
+
+        <h2
+            data-sv="Kontakt"
+            data-en="Contact">
+            Kontakt
+        </h2>
+
+        <p
+            data-sv="Har du frågor eller vill skapa något unikt?"
+            data-en="Have questions or want to create something unique?">
+            Har du frågor eller vill skapa något unikt?
+        </p>
+
+        <div class="contact-details">
+
+            <p>Gmail: jrstudio.support@gmail.com</p>
+
+            <p>Telefon: 0731510335</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 J & R</p>
+
+</footer>
+
+
+<!-- PRODUCT POPUP -->
+
+<div id="productModal" class="modal">
+
+    <div class="modal-box">
+
+        <button class="close" onclick="closeProduct()">×</button>
+
+        <div class="modal-image">
+
+            <img id="modalImage" src="" alt="Produkt">
+
+        </div>
+
+
+        <div class="modal-info">
+
+            <p id="modalNumber" class="product-number">
+                J & R DESIGN 01
+            </p>
+
+            <h2 id="modalTitle">
+                Ignition Cover Red/White
+            </h2>
+
+            <p id="modalDescription">
+                Unik 3D-printad design.
+            </p>
+
+            <strong id="modalPrice">
+                299 kr
+            </strong>
+
+
+            <div id="customOptions">
+
+                <h3
+                    data-sv="Välj utförande"
+                    data-en="Choose your style">
+                    Välj utförande
+                </h3>
+
+                <div class="options">
+
+                    <button class="option active">
+                        <span
+                            data-sv="Plexiglas"
+                            data-en="Plexiglass">
+                            Plexiglas
+                        </span>
+                    </button>
+
+                    <button class="option">
+                        <span
+                            data-sv="Tom"
+                            data-en="Empty">
+                            Tom
+                        </span>
+                    </button>
+
+                    <button class="option">
+                        <span
+                            data-sv="Full"
+                            data-en="Full">
+                            Full
+                        </span>
+                    </button>
+
                 </div>
 
             </div>
 
-        </section>
 
-        <section id="om" class="about">
-            <h2>Om J&R 3D Custom</h2>
+            <button class="preorder"
+                    data-sv="FÖRBESTÄLL"
+                    data-en="PRE-ORDER">
+                FÖRBESTÄLL
+            </button>
 
-            <p>
-                Vi skapar unika 3D-printade delar och designer
-                för dig som vill göra din moped personlig.
-            </p>
-        </section>
+        </div>
 
-        <section id="kontakt" class="contact">
-            <h2>Kontakt</h2>
+    </div>
 
-            <p>
-                Vill du beställa eller har du en egen idé?
-            </p>
+</div>
 
-            <p>
-                Kontakta oss för mer information.
-            </p>
-        </section>
 
-    </main>
+<script src="script.js"></script>
 
 </body>
 </html>
